@@ -6,7 +6,7 @@
 ### Config /home/pi/config.json
 ```
 {
-    "serverURL": "http://your-server-ip:3000",
+    "serverURL": "http://your-server-ip:5000",
     
     "deviceUUID": "pi-name",
     "sensorType": "sensorType",
