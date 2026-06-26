@@ -4,15 +4,13 @@ import requests
 with open("config.json") as f:
     config = json.load(f)
 
-deviceUUID = config["deviceUUID"]
-sensorType = config["sensorType"]
-locationName = config["locationName"]
+register_url = f"{config['serverURL']}/api/registerSensor"
 
-requests.post(
-    "http://your-server:3000/api/registerSensor",
+response = requests.post(
+    register_url,
     json={
-        "deviceUUID": deviceUUID,
-        "sensorType": sensorType,
-        "locationName": locationName
+        "deviceUUID": config["deviceUUID"],
+        "sensorType": config["sensorType"],
+        "locationName": config["locationName"]
     }
 )
